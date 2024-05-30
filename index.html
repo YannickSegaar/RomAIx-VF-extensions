@@ -1665,12 +1665,12 @@ font-display: swap;
                           window.voiceflow.chat.proactive.push(
                             { type: 'text', payload: { message: "Need help? 😊" } }
                           );
-                        }, 6000); // Additional milliseconds delay for the second message adjust as needed
+                        }, 5000); // Additional milliseconds delay for the second message adjust as needed
             
                         // Delay opening the chat window to ensure the proactive messages are loaded
                         setTimeout(function() {
                           window.voiceflow.chat.open();
-                        }, 9000); // Adjust this delay if needed to open the chat after messages
+                        }, 7500); // Adjust this delay if needed to open the chat after messages
                       });
                     };
                     v.src = "https://yannicksegaar.github.io/RomAIx-VF-extensions/bundle.mjs";
