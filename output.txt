@@ -1,0 +1,25 @@
+.
+├── Chat_Widget_Extensions_DEMO-2024-03-07_01-11.vf
+├── README.md
+├── Snapinsta.app_video_An85LL9VlMUHUp9CDO1NJTzYnY1hJQYLzTL8ctL-Nn76Oz5-9EEPvwLZ37XQ9Tm6MP9GSLQXFeHYIqL0CEY7dF_D.MP4
+├── Snapinsta.app_video_F24E8F42D0E06531C3C59289EF344396_video_dashinit.MP4
+├── Snapinsta.app_video_PXM.MP4
+├── bundle.mjs
+├── chatbot.css
+├── extensions.js
+├── extensions_GoTours.js
+├── extensions_Original.js
+├── favicon.ico
+├── index.html
+├── indexWBot.html
+├── index_GoTours.html
+├── index_Original.html
+├── index_SB.html
+├── output.txt
+├── prompts_Email_GTH.py
+├── src
+│   └── components
+│       └── ChatInputWithMenuButton.jsx
+└── test.txt
+
+3 directories, 20 files
