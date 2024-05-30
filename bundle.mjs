@@ -1,3 +1,6 @@
+import { ChatInputWithMenuButton } from './ChatInputWithMenuButton.jsx';
+window.ChatInputWithMenuButton = ChatInputWithMenuButton;
+
 (function(){"use strict";var KP;var Fn=typeof globalThis<"u"?globalThis:typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{};function pa(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}function MT(e){if(e.__esModule)return e;var t=e.default;if(typeof t=="function"){var n=function i(){return this instanceof i?Reflect.construct(t,arguments,this.constructor):t.apply(this,arguments)};n.prototype=t.prototype}else n={};return Object.defineProperty(n,"__esModule",{value:!0}),Object.keys(e).forEach(function(i){var l=Object.getOwnPropertyDescriptor(e,i);Object.defineProperty(n,i,l.get?l:{enumerable:!0,get:function(){return e[i]}})}),n}var PT={exports:{}},f0={},qy={exports:{}},Wn={};/**
  * @license React
  * react.production.min.js

@@ -584,3 +584,66 @@ export const FeedbackExtension = {
     element.appendChild(feedbackContainer)
   },
 }
+
+// YRS: Menu button tryout extension:
+
+export const MenuButtonExtension = {
+  name: 'MenuButton',
+  type: 'response',
+  match: ({ trace }) =>
+    trace.type === 'ext_menuButton' || trace.payload.name === 'ext_menuButton',
+  render: ({ trace, element }) => {
+    const menuContainer = document.createElement('div');
+    menuContainer.innerHTML = `
+      <style>
+        .menu-button {
+          position: relative;
+          display: inline-block;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        .dropdown-content a:hover {
+          background-color: #f1f1f1;
+        }
+        .menu-button:hover .dropdown-content {
+          display: block;
+        }
+      </style>
+      <div class="menu-button">
+        <button>Menu</button>
+        <div class="dropdown-content">
+          <a href="#" data-option="Option1">Option 1</a>
+          <a href="#" data-option="Option2">Option 2</a>
+          <a href="#" data-option="Option3">Option 3</a>
+        </div>
+      </div>
+    `;
+
+    const options = menuContainer.querySelectorAll('.dropdown-content a');
+    options.forEach(option => {
+      option.addEventListener('click', (event) => {
+        event.preventDefault();
+        const selectedOption = option.getAttribute('data-option');
+        window.voiceflow.chat.interact({
+          type: 'text',
+          payload: { message: `You selected: ${selectedOption}` }
+        });
+      });
+    });
+
+    element.appendChild(menuContainer);
+  },
+};
+
